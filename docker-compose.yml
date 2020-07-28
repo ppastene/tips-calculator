@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php_test
+    ports:
+        - "80:80"
+    volumes:
+        - .:/var/www/html:rw
+    stdin_open: true
+    tty: true
